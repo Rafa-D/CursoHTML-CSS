@@ -29,9 +29,9 @@
 
 :root{
     font-size: 18px;
-    --gray30:#212121;
-    --gray20:#212429;
-    --gray10:#616161;
+    --white30:white;
+    --white20:#A5A3A5;
+    --white10:#3A3539;
 }
 
 /* Este es similar al a la pseudo clase root, pero root domina es mejor usarlo
@@ -40,8 +40,11 @@ html{
 } */
 
 body{
-    color: var(--gray30);
-    font-family: 'Roboto', sans-serif;
+    color: var(--white30);
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Nunito', sans-serif;;
+    background: #251f24;
+    margin: 0;
     /* font-family: charter; */
 }
 
@@ -52,11 +55,15 @@ a{
 header{
     /* --gray10: red; */
     font-size: 14px;
-    color: var(--gray10);
+    color: var(--white);
+}
+
+header li{
+    color: var(--white20);
 }
 
 header a{
-    color: var(--gray10);
+    color: var(--white20);
     text-decoration: none;
 }
 
@@ -68,30 +75,59 @@ nav details summary{
     font-weight: bold;
 }
 
+h1, h2, h3{
+    font-weight: normal;
+}
+
 h1{
     font-size: 60px;
+    margin-block-start: 64px;
+    margin-inline-end: 16px;
     /* font-size: 3.75em; */
 }
 
 h2{
     font-size: 2em;
+    margin-block: 40;
 }
 
 h3{
     font-size: 1.5em;
+    font-weight: 600;
+    margin-block: 16px;
+}
+
+hr{
+    margin-block: 40px;
+    border-color: rgba(97, 97, 97, 0.2);
 }
 
 pre{
-    background: #FEC62E; 
+    background: var(--white10);
+    padding: 40px;
+    border: 1px solid red;
+    overflow: auto;
+    border-radius: 8px;
+}
+
+p{
+    color: var(--white20);
 }
 
 .hero{
     /* background: red url("../images/patron.png"); */
-    background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url("../images/patron.png");
+    /* background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url("../images/patron.png"); */
+    background-image: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
     /* background-repeat: no-repeat;
     background-position: center;
     background-size: cover; */
     height: 350px;
+}
+
+.section-content img{
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
 }
 
 .section-content{
@@ -103,13 +139,57 @@ pre{
 }
 
 .section-content h3::before{
-    content: counter(titleList, decimal);
+    content: counter(titleList, decimal) ". ";
 }
 
-.section-content h3::after{
+/* .section-content h3::after{
     content: " ";
     width: 32px;
     height: 4px;
     background: var(--gray30);
     display: inline-block;
+} */
+
+blockquote{
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    background-color: var(--white10);
+    border-radius: 8px;
+    line-height: 32px;
+    font-size: 24px;
+    padding-inline-end: 24px;
+    padding-inline-start: 24px;
+    padding-block-start: 24px;
+    padding-block-end: 24px;
 }
+
+blockquote p{
+    color: var(--white30);
+}
+
+/* .main hr{
+    display: none;
+} */
+
+/* .main{
+    border: 1px solid red;
+} */
+
+.wrapper{
+    /* border: 1px solid yellow; */
+    max-inline-size: 902px;
+    /* block-size: 100px; */
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    margin: auto;
+}
+
+.main-content{
+    /* background: blue; */
+    padding-inline: 16px;
+    /* border: 1px solid blue; */
+}
+
+section + hr{
+    display: none;
+} 
