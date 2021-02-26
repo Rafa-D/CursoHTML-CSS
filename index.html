@@ -10,6 +10,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <title>El blog de Rafa</title>
+        <meta property="og:title" content="Mi proyecto del Curso esencial del de HTML" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Todo lo que necesitas saber en tu dia a dia como Fontend" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="http://127.0.0.1:5500/images/dom.png" />
     </head>
     <body>
         <div class="hero"></div>
@@ -178,10 +183,39 @@
                             <li>padding-block | padding-inline | padding-block-start | padding-block-end | padding-inline-start | padding-inline-end</li>
                         </ul>
                     </section>
+                    <div class="section-content">
+                        <h3>Modelo de caja</h3>
+                        <div class="slider">
+                            <scroll-container class="slider-container">
+                                <scroll-page class="slider-slide" id="video-1">
+                                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/_tniWgtqj_M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </scroll-page>
+                                <scroll-page class="slider-slide" id="video-2">
+                                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/_tniWgtqj_M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </scroll-page>
+                                <scroll-page class="slider-slide" id="video-3">
+                                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/_tniWgtqj_M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </scroll-page>
+                            </scroll-container>
+                            <div class="slider-bullet-list">
+                                <a href="#video-1" class="slider-bullet"></a>
+                                <a href="#video-2" class="slider-bullet"></a>
+                                <a href="#video-3" class="slider-bullet"></a>
+                            </div>
+                        </div>
+                    </div>
                     <p>
                         Si tienes alguna pregunta escríbeme a 
                         <a href="mailto:me@leonidasesteban.com">me@leonidasesteban.com</a>
                     </p>
+                    <div class="section-content">
+                        <h2>Ingresa a nuestro newsletter</h2>
+                        <form action="#" class="form">
+                            <input type="text" required placeholder="Nombre">
+                            <input type="email" required placeholder="Correo Electronico">
+                            <input type="submit" value="Suscribirme">
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>
